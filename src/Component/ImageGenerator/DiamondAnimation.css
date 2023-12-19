@@ -1,0 +1,68 @@
+.diamond-container {
+  perspective: 1500px; /* Adds a 3D perspective to the container */
+  width: 50px; /* Sets the width of the container */
+  height: 50px; /* Sets the height of the container */
+  position: relative; /* Positions the container relative to its normal position */
+  margin: 50px auto; /* Sets the margins for the container */
+}
+
+.img {
+  object-fit: cover; /* Sets the image to cover the entire container */
+  background-color: aqua; /* Sets the background color for the image */
+  width: 100%; /* Sets the width of the image to 100% of its container */
+  height: 100%; /* Sets the height of the image to 100% of its container */
+}
+
+.diamond {
+  width: 100%; /* Sets the width of the diamond shape to 100% of its container */
+  height: 100%; /* Sets the height of the diamond shape to 100% of its container */
+  transform-style: preserve-3d; /* Specifies that the 3D transformations should be preserved */
+  transform: rotateX(45deg) rotateY(45deg); /* Applies a 3D rotation to the diamond shape */
+  animation: rotate 5s infinite linear; /* Applies a rotation animation to the diamond shape */
+}
+
+.face {
+  position: absolute; /* Positions the faces of the diamond shape absolutely */
+  width: 100%; /* Sets the width of the faces to 100% of the diamond shape */
+  height: 100%; /* Sets the height of the faces to 100% of the diamond shape */
+  background-color: #fff; /* Sets the background color for the faces */
+  border: 1px solid #000; /* Adds a border to the faces */
+  opacity: 0.8; /* Sets the opacity of the faces to 0.8 */
+}
+
+.front {
+  transform: translateZ(50px); /* Moves the front face of the diamond shape forward in 3D space */
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(50px); /* Rotates and moves the back face of the diamond shape */
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(50px); /* Rotates and moves the left face of the diamond shape */
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(50px); /* Rotates and moves the right face of the diamond shape */
+}
+
+.top {
+  transform: rotateX(-90deg) translateZ(50px); /* Rotates and moves the top face of the diamond shape */
+}
+
+.bottom {
+  transform: rotateX(90deg) translateZ(50px); /* Rotates and moves the bottom face of the diamond shape */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(45deg) rotateY(45deg); /* Starting point of the rotation animation */
+  }
+  to {
+    transform: rotateX(405deg) rotateY(405deg); /* Ending point of the rotation animation */
+  }
+}
+
+.diam {
+  background-color: transparent; /* Sets the background color of an element with the class "diam" to transparent */
+}
